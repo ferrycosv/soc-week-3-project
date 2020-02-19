@@ -1,9 +1,9 @@
 console.log('-- load & test replaceSubstring --');
-debugger; // step through loading & testing
+//debugger; // step through loading & testing
 
 // replace every occurrence of a substring with a new value
 function replaceSubstring(str, oldThing, newThing) {
-
+  return str.split(oldThing).join(newThing);
 }
 
 // declare and evaluate test cases for replaceSubstring
@@ -28,18 +28,22 @@ console.log(replaceSubstringTests);
 
 // declare handler
 function replaceSubstringHandler() {
-  debugger; // step through user actions
+  //debugger; // step through user actions
 
   // read & process user input
-
+  const text = prompt('enter a text');
+  const searchSubstring = prompt('enter the substring to search');
+  const repSubstring = prompt('enter the substring to replace');
   // execute core logic
-
+  const result = replaceSubstring(text, searchSubstring, repSubstring);
   // display result to user
-
+  alert(result);
   // log action for developer
   console.log('\n-- replaceSubstring --');
   // user inputs
+  console.log(`\n-- text: ${text} substring to search: ${searchSubstring} substring to replace: ${replaceSubstring} --`)
   // result
+  console.log(`\n-- ${result} --`);
 }
 
 // attach handler to replaceSubstring button with an event listener

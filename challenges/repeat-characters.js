@@ -39,7 +39,7 @@ function repeatCharactersHandler() {
   // read & process user input
   const text = prompt('enter a text');
   const repetitions = prompt('enter the number of repetitions');
-  numRepeats = parseInt(repetitions);
+  const numRepeats = parseInt(repetitions);
   const numRepeatsIsANumber = typeof numRepeats === 'number';
   console.assert(numRepeatsIsANumber, 'cast numRepeats to type "number"');
 
